@@ -17,7 +17,7 @@ getcontext().prec = 12
 @click.option("--output", default="map", help="Specify the name of the output file. Defaults to `map`")
 @click.option("--input", default="gpx", help="Specify an input folder. Defaults to `gpx`")
 @click.option("--filter", default=None, help="Specify a filter type. Defaults to no filter", type=click.Choice(['running', 'cycling', 'walking']))
-@click.option("--accuracy", default=4, help="Decimals places of lat/long to use Defaults to `5`")
+@click.option("--accuracy", default=4, help="Decimals places of lat/long to use Defaults to `4`")
 @click.option("--average/--no-average", default=True, help="Average points below accuracy or use lat/long grouping?")
 def main(output, input, filter,accuracy,average):
     points = load_points(input, filter, accuracy, average)
