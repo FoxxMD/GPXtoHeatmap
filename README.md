@@ -37,6 +37,10 @@ Options:
   --input TEXT                    Specify an input folder. Defaults to `gpx`
   --filter [running|cycling|walking]
                                   Specify a filter type. Defaults to no filter
+  --accuracy                      Number of decimal places to round lat/long to. Defaults to `4`
+                                  Increasing accuracy increases amount of data that needs to load
+  --average/--no-average          Averages all lat/long at accuracy N+1 to provide more accurate
+                                  data with less data points. Defaults to `--average`
   --help                          Show this message and exit.
 ```
 
@@ -52,3 +56,7 @@ $ python3 heatmap.py --input gpx --output map
 - Strava users can follow [Strava's instructions](https://support.strava.com/hc/en-us/articles/216918437-Exporting-your-Data-and-Bulk-Export) to export GPX data
 
 **Note:** [GPSBabel](https://www.gpsbabel.org/download.html) tool may help you convert from file formats such as `.tcx` to `.gpx` files
+
+#### Accuracy Levels
+
+See [this explanation](https://gis.stackexchange.com/a/8674/121567) for how decimals places correspond to map accuracy for lat/long.
